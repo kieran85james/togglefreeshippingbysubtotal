@@ -1,0 +1,17 @@
+{
+    "name": "magentomakers/togglefreeshippingbysubtotal",
+    "description": "Ability to toggle free shipping based on subtotal",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+      "MIT"
+    ],
+    "autoload": {
+      "psr-4": {
+        "MagentoMakers\\ToggleFreeShippingBySubtotal\\": ""
+      },
+      "files": [
+        "registration.php"
+      ]
+    }
+  }

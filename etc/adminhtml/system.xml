@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="carriers" type="text" sortOrder="320" showInDefault="1" showInWebsite="1" showInStore="1">
+            <group id="freeshipping" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="enable_subtotal" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" canRestore="1">
+                    <label>Applicable subtotal</label>
+                    <comment>Allow free shipping when cart total is over set limit.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="free_shipping_subtotal" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="1">
+                    <depends>
+                        <field id="enable_subtotal">1</field>
+                    </depends>
+                </field>
+                <field id="tax_including" translate="label" sortOrder="5" type="select" showInDefault="1" showInWebsite="1" canRestore="1">
+                    <depends>
+                        <field id="enable_subtotal">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
